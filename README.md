@@ -37,7 +37,7 @@ Lab1/
 |  |  |--web_scraper.py
 |  |  `--data_filter.py
 `--README.md
-
+```
 
 ## Setup
 Make sure Python3 and pip are installed.<br>
