@@ -23,19 +23,19 @@ This project scrapes the CNBC webside into a HTML file and extracts the spefic e
       - link
 
 ## Folder Structure
-Lab1/
-|--Shufen_Chen_9180940635/
-|  |--data/
-|  |  |--raw_data/
-|  |  |  |--web_data.html
-|  |  |--processed_data/
-|  |  |  |--market_data.csv
-|  |  |  |--news_data.csv
-|  |--scripts/
-|  |  |--task_1.py
-|  |  |--web_scraper.py
-|  |  |--data_filter.py
-|--README.md
+Lab1/<br>
+|--Shufen_Chen_9180940635/<br>
+|  |--data/<br>
+|  |  |--raw_data/<br>
+|  |  |  |--web_data.html<br>
+|  |  |--processed_data/<br>
+|  |  |  |--market_data.csv<br>
+|  |  |  |--news_data.csv<br>
+|  |--scripts/<br>
+|  |  |--task_1.py<br>
+|  |  |--web_scraper.py<br>
+|  |  |--data_filter.py<br>
+|--README.md<br>
 
 
 ## Setup
@@ -59,6 +59,6 @@ python3 data_filter.py
 
 
 ## Output Files
-data/raw_data/web_data.html
-data/processed_data/market_data.csv
-data/processed_data/news_data.csv
+data/raw_data/web_data.html<br>
+data/processed_data/market_data.csv<br>
+data/processed_data/news_data.csv<br>
