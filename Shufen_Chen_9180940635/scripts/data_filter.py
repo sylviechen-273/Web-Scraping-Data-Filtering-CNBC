@@ -6,8 +6,10 @@ with open("../data/raw_data/web_data.html", "r", encoding = "utf-8") as f:
     html = f.read()
 
 # parse the html
+print("Parsing the html...")
 soup = BeautifulSoup(html, 'html.parser')
 
+print("Filtering fields...")
 # find the container for market banner
 container = soup.find("div", id = "market-data-scroll-container")
 cards = container.find_all("a", class_ = "MarketCard-container")
@@ -32,14 +34,19 @@ for new in news:
     link = new.find("a", class_ = "LatestNews-headline")["href"]
     news_list.append([latestNews_timestamp, title, link])
 
+print("Extraction completed!")
+
 # save the list into csv files
 with open ('../data/processed_data/market_data.csv', 'w',  encoding = 'utf-8') as f:
     writer = csv.writer(f)
     writer.writerow(["marketCard_symbol", "marketCard_stockPosition", "marketCard_changePct"])
     writer.writerows(market_list)
-
+print("Successfully saved the market banner information as market_data.csv")
 
 with open ('../data/processed_data/news_data.csv', 'w', encoding = 'utf-8') as f1:
     writer = csv.writer(f1)
     writer.writerow(["LatestNews-timestamp", "title", "link"])
     writer.writerows(news_list)
+
+print("Successfully saved the latest news information as news_data.csv")
+print("Data filtering completed!")

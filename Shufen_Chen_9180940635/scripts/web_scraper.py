@@ -3,6 +3,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 import time
 
+print("scraping the webpage...")
 
 # the target url
 url = "https://www.cnbc.com/world/?region=world"
@@ -18,15 +19,16 @@ service = Service("/usr/local/bin/geckodriver")
 # start the browser and get the html
 browser = webdriver.Firefox(service=service, options=options)
 browser.get(url)
-
 time.sleep(8)
 
 content = browser.page_source
-
+print("Successfully scraped the webpage!")
 
 # save the html into the raw_data folder
 with open('../data/raw_data/web_data.html', 'w', encoding='utf-8') as file:
-    file.write(content) 
+    file.write(content)
+print("Successfully saved the webpage as web_data.html")
 
 # exit the browser
 browser.quit()
+print("Scraping task completed")
