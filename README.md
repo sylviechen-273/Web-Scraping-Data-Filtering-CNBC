@@ -1,4 +1,4 @@
-# Lab 1: Web Scraping & Data Filtering (CNBC)
+# Web Scraping & Data Filtering (CNBC)
 
 name: Shufen Chen<br>
 USCID: 9180940635<br>
